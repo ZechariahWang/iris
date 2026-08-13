@@ -15,7 +15,11 @@ Summarize what is new: who it is from, what it is about, and whether it needs a 
 action. Lead with anything urgent or time-sensitive (deadlines, professors, appointments, \
 anything from uwaterloo.ca). Skip promotions and newsletters unless genuinely important. \
 Keep it short and simple to read, no emojis, no em dashes. If the command errors or you \
-cannot access the inbox, say so clearly instead of guessing."
+cannot access the inbox, say so clearly instead of guessing. \
+Do not use a message-sending tool to deliver this. Just write the full summary as your \
+final plain-text reply, it gets delivered automatically. If your reply is only a short \
+confirmation with no actual content, that is wrong, the full summary text itself must be \
+the final reply."
 
 if [ -z "$EMAIL_JOB_ID" ]; then
   echo "Creating the email-update cron job..."

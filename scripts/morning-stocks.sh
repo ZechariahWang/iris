@@ -12,7 +12,11 @@ AVGO, INTC, MU, ARM, plus AI-heavy megacaps (MSFT, GOOGL, META). Include: notabl
 price moves and why, key headlines, earnings or analyst actions, and anything \
 upcoming today. Keep it concise enough for a single Discord message. No emojis, no emdashes, make it extremely short and simple to read \
 give reccomended future steps, but DONT use it as financial advice \
-if related tech stocks earnings reports are closing, update me so i can be on the lookout."
+if related tech stocks earnings reports are closing, update me so i can be on the lookout. \
+Do not use a message-sending tool to deliver this. Just write the full briefing as your \
+final plain-text reply, it gets delivered automatically. If your reply is only a short \
+confirmation like 'briefing sent' with no actual content, that is wrong, the full briefing \
+text itself must be the final reply."
 
 if [ -z "$DISCORD_USER_ID" ]; then
   echo "smt went wrong, enter user id"

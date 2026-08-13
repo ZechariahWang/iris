@@ -14,7 +14,11 @@ description, wind (speed in km/h plus direction), and precipitation. Get the wea
 running: curl -s 'https://wttr.in/$CITY?format=j1' and read current_condition (temp_C, \
 FeelsLikeC, weatherDesc, windspeedKmph, winddir16Point, precipMM). Keep it to a few short, \
 friendly lines. No emojis, no em dashes. If the weather fetch fails, still send the greeting \
-and just say the weather is unavailable this morning."
+and just say the weather is unavailable this morning. \
+Do not use a message-sending tool to deliver this. Just write the greeting as your final \
+plain-text reply, it gets delivered automatically. If your reply is only a short \
+confirmation with no actual greeting, that is wrong, the full greeting text itself must \
+be the final reply."
 
 if [ -z "$DISCORD_USER_ID" ]; then
   echo "smt went wrong, enter user id"
