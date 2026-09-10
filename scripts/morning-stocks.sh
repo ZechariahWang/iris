@@ -4,7 +4,7 @@ DISCORD_USER_ID="637824014168883221"
 JOB_ID="283e4917-8882-45fb-bf72-0d127fa90044"
 
 SCHEDULE="10 8 * * *"
-TIMEZONE="America/Edmonton"
+TIMEZONE="America/New_York"
 
 PROMPT="Give me this morning's tech stock briefing focused on semiconductors and AI. \
 Search the web for the latest news and premarket/overnight moves on NVDA, AMD, TSM, \

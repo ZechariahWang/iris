@@ -4,8 +4,8 @@ DISCORD_USER_ID="637824014168883221"
 JOB_ID="19881b99-ca22-4d56-802e-96f6e8001664"
 
 SCHEDULE="0 8 * * *"
-TIMEZONE="America/Edmonton"
-CITY="Edmonton"
+TIMEZONE="America/New_York"
+CITY="Waterloo,Ontario"
 
 PROMPT="Send zech a short, warm morning greeting. Open with something like: \
 \"Good morning zech, preparing your daily updates.\" Then give this morning's conditions \
