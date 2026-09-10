@@ -5,7 +5,7 @@ DISCORD_USER_ID="637824014168883221"
 JOB_ID="28df03be-56be-403e-b062-372fa612fe4e"
 
 SCHEDULE="15 8 * * *"
-TIMEZONE="America/Edmonton"
+TIMEZONE="America/New_York"
 
 PROMPT="Teach me ONE core ROS2 (Robot Operating System 2) concept today, together with the actual syntax for it. \
 First read the file memory/ros2-taught.md in your workspace (create it if it does not exist). \
