@@ -7,7 +7,7 @@ JOB_ID="28df03be-56be-403e-b062-372fa612fe4e"
 SCHEDULE="15 8 * * *"
 TIMEZONE="America/New_York"
 
-PROMPT="Teach me ONE core ROS2 (Robot Operating System 2) concept today, together with the actual syntax for it. \
+PROMPT="Teach me ONE core ROS2 (Robot Operating System 2) concept today, focused on the syntax. \
 First read the file memory/ros2-taught.md in your workspace (create it if it does not exist). \
 It lists every concept already covered. Pick one concept from the syllabus below that is NOT in that file yet, \
 working roughly in the order the syllabus is written so the fundamentals come first. \
@@ -35,20 +35,20 @@ lifecycle (managed) nodes and their state machine, \
 namespaces and remapping (--ros-args -r, -p, __node, __ns), \
 rclcpp equivalents of the rclpy patterns above, \
 and Gazebo or simulation bringup basics. \
-Structure the lesson exactly like this: \
-1. Concept name. \
-2. What it is, in two or three plain sentences. \
-3. Why it matters and when you would reach for it on a real robot. \
-4. The syntax: real, runnable code or CLI commands in a code block (Python/rclpy by default unless the \
-concept is CLI-only or C++-specific), followed by a short line-by-line explanation of anything non-obvious. \
-5. Common gotchas and conventions ROS2 developers get wrong or forget about this concept. \
-6. One concrete real-world example of it in use on an actual robot or a well-known ROS2 package (for example \
-Nav2, MoveIt 2, TurtleBot, or a typical sensor driver). \
-Important: assume I know Python and general programming but I am new to ROS2, so every ROS2-specific term, \
-abbreviation, or acronym (for example node, topic, DDS, QoS, colcon, ament, overlay, tf frame) must be explained \
-in one plain sentence the FIRST time it appears, do not leave any term undefined. \
-Prefer code over prose; the examples must be correct for ROS2 Humble or Jazzy and actually run. \
-No emojis, no emdashes. Keep it short enough for one or two Discord messages. \
+Format the lesson exactly like this, with no numbered headings: \
+Line 1: the concept name in ALL CAPS, wrapped in double asterisks so it is bold on Discord, for example **PUBLISHERS AND SUBSCRIBERS**. \
+Then a blank line, then one or two short plain-English sentences saying what it is and what problem it solves. \
+Then one code block with the smallest complete, runnable example of the syntax (Python/rclpy by default, CLI \
+commands when the concept is CLI-only). Keep the code minimal: no extra features, no error handling, only \
+what is needed to show the pattern. Add a short inline comment on each important line so the code explains itself. \
+Then a bullet list of at most four bullets, one line each, explaining the key syntax pieces: what each function \
+or command does and which arguments matter. \
+Then one final line starting with 'Gotcha:' with the single most common beginner mistake for this concept. \
+Rules: I know Python but I am brand new to ROS2, so write like you are explaining to a beginner. Use everyday \
+words, short sentences, and no jargon without a two or three word plain-English gloss the first time it appears, \
+for example 'a node (one running program)'. Prioritize showing the syntax over explaining theory. \
+Hard limit: the whole lesson must fit in ONE Discord message, under 1800 characters including the code block. \
+No emojis, no emdashes, no section numbers, no closing summary. \
 After composing the lesson, append a line with today's date and the concept name to memory/ros2-taught.md so the rotation stays tracked (repeat entries are expected once a new cycle starts). \
 Do not use a message-sending tool to deliver this. Just write the full lesson as your \
 final plain-text reply, it gets delivered automatically. If your reply is only a short \
