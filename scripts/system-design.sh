@@ -25,6 +25,12 @@ Structure the lesson exactly like this: \
 4. How it works, including the key tradeoffs and terms I should say out loud in an interview. \
 5. One concrete real-world example of it in use (for example how Twitter, Netflix, or Uber applies it). \
 6. One sentence I could actually say in an interview to sound fluent. \
+Important: assume I know basic programming but zero system design jargon. Every technical term, \
+abbreviation, or acronym you use (for example L4, L7, TTL, quorum, replica, hash ring) must be \
+explained in one plain sentence the FIRST time it appears, do not leave any term undefined. \
+When a term is one option out of a set, briefly name the other options and what they are, for \
+example if you mention L4 and L7 load balancing, say these refer to layers of the OSI networking \
+model, give a one-line summary of what that model is, and note what the other relevant layers do. \
 Keep it simple and concise but with enough depth to discuss for a few minutes in an interview. \
 No emojis, no emdashes. Keep it short enough for one or two Discord messages. \
 After composing the lesson, append a line with today's date and the concept name to memory/system-design-taught.md so the rotation stays tracked (repeat entries are expected once a new cycle starts). \
