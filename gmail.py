@@ -5,6 +5,15 @@ from email.header import decode_header, make_header
 
 CFG_PATH = os.path.expanduser('~/.config/mail/gmail.env')
 
+BOXES = {
+    'inbox': 'INBOX',
+    'sent': '[Gmail]/Sent Mail',
+    'all': '[Gmail]/All Mail',
+    'drafts': '[Gmail]/Drafts',
+    'spam': '[Gmail]/Spam',
+    'trash': '[Gmail]/Trash',
+}
+
 def load_cfg():
     cfg = {}
     for line in open(CFG_PATH):
@@ -14,10 +23,11 @@ def load_cfg():
             cfg[k] = v
     return cfg
 
-def connect(cfg):
+def connect(cfg, box='inbox'):
     M = imaplib.IMAP4_SSL(cfg['IMAP_HOST'], int(cfg['IMAP_PORT']))
     M.login(cfg['IMAP_USER'], cfg['IMAP_PASS'])
-    M.select('INBOX', readonly=True)
+    mailbox = BOXES.get(box, box)
+    M.select(f'"{mailbox}"', readonly=True)
     return M
 
 def dh(val):
@@ -76,10 +86,18 @@ def cmd_read(M, uid):
 
 def main():
     args = sys.argv[1:]
+    box = 'inbox'
+    rest = []
+    for a in args:
+        if a.startswith('--box='):
+            box = a.split('=', 1)[1]
+        else:
+            rest.append(a)
+    args = rest
     if not args:
         print(__doc__); return
     cfg = load_cfg()
-    M = connect(cfg)
+    M = connect(cfg, box)
     try:
         c = args[0]
         if c == 'list':
